@@ -39,9 +39,9 @@ CREATE TABLE IF NOT EXISTS `GFO`.`Client` (
   `Password` VARCHAR(20) NOT NULL,
   `Firstname` VARCHAR(20) NOT NULL,
   `Lastname` VARCHAR(20) NOT NULL,
-  `E-mail` VARCHAR(50) NOT NULL,
+  `Email` VARCHAR(50) NOT NULL,
   `Mobile` VARCHAR(13) NOT NULL,
-  `Weight` DECIMAL(1) NOT NULL,
+  `Weight` float(1) NOT NULL,
   `Height` INT NOT NULL,
   `Feedback` VARCHAR(45) NULL,
   `Goal_Goalid` INT NOT NULL,
@@ -81,7 +81,7 @@ DROP TABLE IF EXISTS `GFO`.`Employee` ;
 CREATE TABLE IF NOT EXISTS `GFO`.`Employee` (
   `Username` VARCHAR(20) NOT NULL,
   `Password` VARCHAR(20) NOT NULL,
-  `E-mail` VARCHAR(45) NOT NULL,
+  `Email` VARCHAR(45) NOT NULL,
   `Firstname` VARCHAR(45) NOT NULL,
   `Lastname` VARCHAR(45) NOT NULL,
   `Mobile` VARCHAR(13) NOT NULL,
@@ -99,7 +99,7 @@ DROP TABLE IF EXISTS `GFO`.`Product` ;
 CREATE TABLE IF NOT EXISTS `GFO`.`Product` (
   `Productid` INT NOT NULL,
   `Name` VARCHAR(45) NOT NULL,
-  `Price` DECIMAL(2) NOT NULL,
+  `Price` float(2) NOT NULL,
   `Description` VARCHAR(45) NULL,
   PRIMARY KEY (`Productid`))
 ENGINE = InnoDB;
@@ -274,7 +274,7 @@ CREATE TABLE IF NOT EXISTS `GFO`.`Exercise_Part` (
   `Set_Rest` INT NOT NULL,
   `Sets` INT NOT NULL,
   `Reps` INT NOT NULL,
-  `Weight` DECIMAL(2) NULL,
+  `Weight` float(2) NULL,
   `Duration` INT NULL,
   PRIMARY KEY (`Exercise_Exerciseid`, `Part_PartId`),
   INDEX `fk_Exercise_has_Part_Part1_idx` (`Part_PartId` ASC),
