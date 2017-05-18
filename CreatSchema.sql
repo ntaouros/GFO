@@ -85,8 +85,8 @@ CREATE TABLE IF NOT EXISTS `GFO`.`Employee` (
   `Firstname` VARCHAR(45) NOT NULL,
   `Lastname` VARCHAR(45) NOT NULL,
   `Mobile` VARCHAR(13) NOT NULL,
-  `Start_Shift` DATETIME NOT NULL,
-  `End_Shift` DATETIME NOT NULL,
+  `Start_Shift` TIME NOT NULL,
+  `End_Shift` TIME NOT NULL,
   PRIMARY KEY (`Username`))
 ENGINE = InnoDB;
 
