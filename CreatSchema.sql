@@ -291,6 +291,24 @@ CREATE TABLE IF NOT EXISTS `GFO`.`Exercise_Part` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `GFO`.`Measure`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `GFO`.`Measure` ;
+
+CREATE TABLE IF NOT EXISTS `GFO`.`Measure` (
+  `measure_date` DATETIME NOT NULL,
+  `weight` INT NOT NULL,
+  `fat_percentage` INT NOT NULL,
+  `Client_Username` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`measure_date`, `Client_Username`),
+  INDEX `fk_Measure_Client1_idx` (`Client_Username` ASC),
+  CONSTRAINT `fk_Measure_Client1`
+    FOREIGN KEY (`Client_Username`)
+    REFERENCES `GFO`.`Client` (`Username`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
