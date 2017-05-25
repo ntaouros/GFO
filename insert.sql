@@ -1,5 +1,3 @@
-use gfo;
-
 INSERT INTO goal
 VALUES (1, 'Gain Muscle');
 INSERT INTO goal
@@ -10,20 +8,29 @@ VALUES (3, 'Loose Weight');
 
 
 INSERT INTO exercise
-VALUES	(1 ,'Bench Press',40),
-		(2,'Squat',80),
-		(3,'DeadLift',90),
-		(4,'Pull ups',50),
-        (5,'Barbel Curl',15),
-        (6,'Trishep Pushdown',15),
-        (7,'Peck Deck',25),
-        (8,'Overhead Barbel Press',50),
-        (9,'Incline Barbel Press',50),
-        (10,'Dips',30),
-        (11,'t-bar row',30),
-        (12,'Pendlay row',30),
-        (13,'Front-Squat',100);
-                
+VALUES	(1 ,'benchpress',40),
+		(2,'pullups',80),
+		(3,'deadlift',90),
+		(4,'romaniandeadlift',50),
+        (5,'shrugs',15),
+        (6,'tbarrow',15),
+        (7,'bentoverrow',25),
+        (8,'inclinedumbell',50),
+        (9,'flyes',50),
+        (10,'shoulderpress',30),
+        (11,'onearmdumbell',30),
+        (12,'latteralraise',30),
+        (13,'bicepcurls',30),
+        (14,'hammercurls',30),
+        (15,'preachercurls',30),
+        (16,'skullcrushers',30),
+        (17,'squats',30),
+        (18,'legextensions',30),
+        (19,'legraises',30),
+        (20,'legcurls',30),
+        (21,'legpress',30),
+        (22,'lunges',30),
+        (23,'calfraises',30);
 
 
 INSERT INTO client
@@ -38,7 +45,8 @@ VALUES 	("2017-04-01 08:00:00",60,19,'GDanos'),
     
 INSERT INTO visit
 VALUES 	("2017-04-01 08:00:00",'GDanos'),
-		("2017-04-01 08:00:00",'MDanos');
+		("2017-04-01 08:50:00",'Mpouti'),
+		("2017-04-01 09:32:00",'MDanos');
 		    
 
 INSERT INTO product
@@ -58,8 +66,8 @@ VALUES	('MDanos',1,5,'Elpizw na mhn faei ta nefra mou'),
 		('MDanos',2,5,'Polu kalh prwteinh.Paramenw fusikos');
 
 INSERT INTO employee
-VALUES 	('Xrhstos12','1111','xrhstos12@mail.com','Xrhstos','Xristidhs','6981011022',"16:00:01","00:00:00"),
-		('Nikh24','1111','nikh23@mail.com','Nikh','Gianna','6981012022',"08:00:00","16:00:00");
+VALUES 	('Xrhstos12','1111','xrhstos12@mail.com','Xrhstos','Xristidhs','6981011022',"00:00:00","08:00:00"),
+		('Nikh24','1111','nikh23@mail.com','Nikh','Gianna','6981012022',"08:00:01","016:00:00");
 		
 INSERT INTO plan
 VALUES	(1,'30-DAY STRENGTH','Xrhstos12',2),
@@ -103,3 +111,4 @@ VALUES	(1,1,3,5,5,62.5,1),
 		(2,3,3,5,5,62.5,1),
 		(13,3,3,5,5,62.5,1),
         (3,3,3,10,5,62.5,1);
+        

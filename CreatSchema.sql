@@ -1,5 +1,3 @@
-
-
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
@@ -39,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `GFO`.`Client` (
   `Email` VARCHAR(50) NOT NULL,
   `Mobile` VARCHAR(13) NOT NULL,
   `Weight` float(1) NOT NULL,
-  `Height` INT NOT NULL,
+  `Height` float(1) NOT NULL,
   `Feedback` VARCHAR(45) NULL,
   `Goal_Goalid` INT NOT NULL,
   PRIMARY KEY (`Username`),
@@ -97,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `GFO`.`Product` (
   `Productid` INT NOT NULL,
   `Name` VARCHAR(45) NOT NULL,
   `Price` float(2) NOT NULL,
-  `Description` LONGTEXT NULL,
+  `Description` VARCHAR(45) NULL,
   PRIMARY KEY (`Productid`))
 ENGINE = InnoDB;
 
@@ -197,7 +195,7 @@ CREATE TABLE IF NOT EXISTS `GFO`.`Rate` (
   `Client_Username` VARCHAR(20) NOT NULL,
   `Product_Productid` INT NOT NULL,
   `Rate` INT NOT NULL,
-  `Comment` LONGTEXT NULL,
+  `Comment` VARCHAR(100) NULL,
   PRIMARY KEY (`Client_Username`, `Product_Productid`),
   INDEX `fk_Client_has_Product_Product1_idx` (`Product_Productid` ASC),
   INDEX `fk_Client_has_Product_Client1_idx` (`Client_Username` ASC),
@@ -247,7 +245,7 @@ DROP TABLE IF EXISTS `GFO`.`Part` ;
 
 CREATE TABLE IF NOT EXISTS `GFO`.`Part` (
   `PartId` INT NOT NULL,
-  `Description` LONGTEXT NOT NULL,
+  `Description` VARCHAR(45) NOT NULL,
   `Plan_PlanId` INT NOT NULL,
   `Ex_Rest` INT NOT NULL,
   PRIMARY KEY (`PartId`),
