@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `GFO`.`Product` (
   `Productid` INT NOT NULL,
   `Name` VARCHAR(45) NOT NULL,
   `Price` float(2) NOT NULL,
-  `Description` VARCHAR(45) NULL,
+  `Description` LONGTEXT NULL,
   PRIMARY KEY (`Productid`))
 ENGINE = InnoDB;
 
@@ -197,7 +197,7 @@ CREATE TABLE IF NOT EXISTS `GFO`.`Rate` (
   `Client_Username` VARCHAR(20) NOT NULL,
   `Product_Productid` INT NOT NULL,
   `Rate` INT NOT NULL,
-  `Comment` VARCHAR(100) NULL,
+  `Comment` LONGTEXT NULL,
   PRIMARY KEY (`Client_Username`, `Product_Productid`),
   INDEX `fk_Client_has_Product_Product1_idx` (`Product_Productid` ASC),
   INDEX `fk_Client_has_Product_Client1_idx` (`Client_Username` ASC),
@@ -247,7 +247,7 @@ DROP TABLE IF EXISTS `GFO`.`Part` ;
 
 CREATE TABLE IF NOT EXISTS `GFO`.`Part` (
   `PartId` INT NOT NULL,
-  `Description` VARCHAR(45) NOT NULL,
+  `Description` LONGTEXT NOT NULL,
   `Plan_PlanId` INT NOT NULL,
   `Ex_Rest` INT NOT NULL,
   PRIMARY KEY (`PartId`),
